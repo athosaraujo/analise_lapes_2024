@@ -111,7 +111,8 @@ plt.show()
 Com isso, podemos obter insights valiosos sobre como aspectos como financiamento, número de participantes e marcos alcançados impactam o desempenho e o status final das startups.
 
 <img src="IMG/Fig. 2.png" alt="Figura 2"/>
-> Figura 2. Mapa de calor de correlação
+
+  > Figura 2. Mapa de calor de correlação
 
 No mapa de calor, é interessante observar que há quatro pontos de maior atividade localizados nas extremidades. Essa concentração pode ser atribuída à correlação entre as datas de financiamento e a presença de diferentes rodadas de investimento. 
 
@@ -193,7 +194,8 @@ describeNum.T.style.background_gradient(cmap='rocket',low=0.2,high=2.9)
 ```
 
 <img src="IMG/Fig. 3.png" alt="Figura 3"/>
-> Figura 3. - Colunas relevantes em describeNum
+  
+  > Figura 3. - Colunas relevantes em describeNum
 
 Aqui podemos ver que as datas de fundação e de marcos tem fileiras com valores negativos, o que torna essas startups nulas para nossa análise, então podemos apenas largar essas fileiras.
 
@@ -201,10 +203,12 @@ Aqui podemos ver que as datas de fundação e de marcos tem fileiras com valores
 df[['age_first_funding_year', 'age_last_funding_year', 'age_first_milestone_year', 'age_last_milestone_year']].plot(figsize=(15, 5))
 ```
 <img src="IMG/Fig. 4.1.png" alt="Figura 4.1"/>
-> Figura 4.1 Idades de fundação/marcos das startups. Contém entradas com idades negativas.
+
+  > Figura 4.1 Idades de fundação/marcos das startups. Contém entradas com idades negativas.
 
 <img src="IMG/Fig. 4.2.png" alt="Figura 4.2"/>
-> Figura 4.2 Investimentos totais nas startups
+
+  > Figura 4.2 Investimentos totais nas startups
 
 ```python
 df.drop(df[(df['age_first_funding_year'] < 0 )   | (df['age_last_funding_year'] < 0) | (df['age_first_milestone_year'] < 0 ) | (df['age_last_milestone_year'] < 0 )].index,axis=0, inplace=True)
@@ -298,7 +302,8 @@ axs[1].set_title('Taxa de sucesso de startups em rounds')
 plt.show()
 ```
 <img src="IMG/Fig. 6.1.png" alt="Figura 6.1"/>
-> Figura 6.1 Gráficos de Sucesso/Falha por tipo de startup
+
+  > Figura 6.1 Gráficos de Sucesso/Falha por tipo de startup
 
 ```python
 category_counts['Acquired'] = df[df['is_acquired'] == 1].groupby('category_code')['is_acquired'].count()
@@ -341,7 +346,8 @@ plt.tight_layout()
 plt.show()
 ```
 <img src="IMG/Fig. 6.2.png" alt="Figura 6.2"/>
-> Figura 6.2 Gráficos de Sucesso/Falha por categoria (proporcionais)
+
+  > Figura 6.2 Gráficos de Sucesso/Falha por categoria (proporcionais)
 
 ```python
 plt.figure(figsize=(12, 6))
@@ -370,7 +376,9 @@ plt.tight_layout()
 plt.show()
 ```
 <img src="IMG/Fig. 6.3.png" alt="Figura 6.3"/>
-> Figura 6.3 Histograma de datas 
+  
+  > Figura 6.3 Histograma de datas
+
 # Insights Finais  
 
 1. Um fator que fortemente impacta o desempenho de uma startup é se ela é "semeada", ou seja financiada por incubadora ou se ela é financiada por rounds, contando com o investimento após metas. Uma hipotese do porquê disso acontecer é que startups incubadas contam apenas com uma ementa inicial para o investimento, já startups por rounds também contam com a mentoria dos investidores e uma visão mais dinâmica do mercado.
