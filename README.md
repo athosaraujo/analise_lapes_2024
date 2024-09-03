@@ -145,6 +145,7 @@ missing
 | age\_first\_milestone\_year | 152         | 16\.468039003250272  |
 | age\_last\_milestone\_year  | 152         | 16\.468039003250272  |
 | state\_code\.1              | 1           | 0\.10834236186348861 |
+
 Na tabela gerada pela célula de código acima, podemos ver que `Unnamed: 6`, nossa coluna de endereços concatenados se encontra com mais da metade das fileiras faltando e `closed_at` faltando em 63%, possivelmente estando relacionada ao número de startups que foram adquiridas.
 
 Além dessas duas colunas, temos `age_first_milestone_year` e `age_last_milestone_year`, que estão faltando aparentemente nas mesmas fileiras. Por fim temos `state_code.1`, possivelmente uma coluna secundaria que se referia a coluna de `state_code`, logo tornando a mesma redundante.
@@ -250,6 +251,7 @@ describeNum.T
 | name           | 923   | 922    | Redwood Systems        | 2    |
 | category\_code | 923   | 35     | software               | 153  |
 | object\_id     | 923   | 922    | c:28482                | 2    |
+
 A unica atipicidade que encontramos por aqui é a presença de uma fileira duplicada, que pode ser facilmente removida.
 ```python
 df[df['id'] == 'c:28482'].shape # (2, 47)
