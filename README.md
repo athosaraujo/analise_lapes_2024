@@ -80,7 +80,8 @@ df.info()
 48 status                   923 non-null object
 ```
 
-![[Fig. 1.png]]
+<img src="IMG/Fig. 1.png" alt="Figura 1"/>
+
 > Figura 1. Exemplo de cada coluna
 
 As colunas `state_code`, `latitude`, `longitude`, `zip_code`, `city`, `Unnamed:6`, `state_code.1`,
@@ -109,7 +110,7 @@ plt.show()
 ```
 Com isso, podemos obter insights valiosos sobre como aspectos como financiamento, número de participantes e marcos alcançados impactam o desempenho e o status final das startups.
 
-![[Fig. 2.png]]
+<img src="IMG/Fig. 2.png" alt="Figura 2"/>
 > Figura 2. Mapa de calor de correlação
 
 No mapa de calor, é interessante observar que há quatro pontos de maior atividade localizados nas extremidades. Essa concentração pode ser atribuída à correlação entre as datas de financiamento e a presença de diferentes rodadas de investimento. 
@@ -191,7 +192,7 @@ describeNum = describeNum.describe(include =['float64', 'int64', 'float', 'int']
 describeNum.T.style.background_gradient(cmap='rocket',low=0.2,high=2.9)
 ```
 
-![[Fig. 3.png]]
+<img src="IMG/Fig. 3.png" alt="Figura 3"/>
 > Figura 3. - Colunas relevantes em describeNum
 
 Aqui podemos ver que as datas de fundação e de marcos tem fileiras com valores negativos, o que torna essas startups nulas para nossa análise, então podemos apenas largar essas fileiras.
@@ -199,10 +200,10 @@ Aqui podemos ver que as datas de fundação e de marcos tem fileiras com valores
 ```python
 df[['age_first_funding_year', 'age_last_funding_year', 'age_first_milestone_year', 'age_last_milestone_year']].plot(figsize=(15, 5))
 ```
-![[Fig. 4.1.png]]
+<img src="IMG/Fig. 4.1.png" alt="Figura 4.1"/>
 > Figura 4.1 Idades de fundação/marcos das startups. Contém entradas com idades negativas.
 
-![[Fig. 4.2.png]]
+<img src="IMG/Fig. 4.2.png" alt="Figura 4.2"/>
 > Figura 4.2 Investimentos totais nas startups
 
 ```python
@@ -226,7 +227,7 @@ df.drop(funding_total_outliers.index,inplace=True)
 ```
 
 Repetindo a célula de `describeNum` temos:
-![[Fig. 5.png]]
+<img src="IMG/Fig. 5.png" alt="Figura 5"/>
 > Figura 5. Dataset numérico normalizado
 
 Por fim vamos ver como esta o dataset categórico
@@ -296,7 +297,7 @@ axs[1].set_title('Taxa de sucesso de startups em rounds')
 
 plt.show()
 ```
-![[Fig. 6.1.png]]
+<img src="IMG/Fig. 6.1.png" alt="Figura 6.1"/>
 > Figura 6.1 Gráficos de Sucesso/Falha por tipo de startup
 
 ```python
@@ -339,7 +340,7 @@ axs[1].legend()
 plt.tight_layout()
 plt.show()
 ```
-![[Fig. 6.2.png]]
+<img src="IMG/Fig. 6.2.png" alt="Figura 6.2"/>
 > Figura 6.2 Gráficos de Sucesso/Falha por categoria (proporcionais)
 
 ```python
@@ -368,7 +369,7 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
 ```
-![[Fig. 6.3.png]]
+<img src="IMG/Fig. 6.3.png" alt="Figura 6.3"/>
 > Figura 6.3 Histograma de datas 
 # Insights Finais  
 
