@@ -2,7 +2,7 @@
 
 Este repositório apresenta uma análise detalhada dos dados contidos no arquivo `startup data.csv`, conforme as instruções da ementa do processo seletivo para o Laboratório de Pesquisa de Software do CESUPA.
 
-A análise será dividida em algumas etapas, incluindo a identificação dos dados, o tratamento de dados nulos, a remoção de fileiras inválidas e duplicadas, a separação de dados categóricos e numéricos, e a elaboração de um modelo preditivo para determinar se uma startup será bem-sucedida ou não, com base nos dados inseridos pelo usuário.
+A análise será dividida em algumas etapas, incluindo a identificação dos dados, o tratamento de dados nulos, a remoção de fileiras inválidas e duplicadas, a separação de dados categóricos e numéricos, e a elaboração de insights baseados nas informações baseadas nos dados analizados.
 
 ---
 ## Introdução
