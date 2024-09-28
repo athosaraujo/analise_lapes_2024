@@ -20,7 +20,7 @@ from matplotlib import pyplot as plt
 Para começar nossa análise, é essencial examinarmos as colunas presentes no conjunto de dados e compreendermos o significado de cada uma delas e as relações presentes entre si.
 
 ```python
-df = pd.a('startup data.csv')
+df = pd.read_csv('startup data.csv')
 df.info()
 ```
 
